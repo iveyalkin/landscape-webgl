@@ -1,0 +1,16 @@
+{
+    "name": "IV.Audio",
+    "rootNamespace": "IV.PAL.Editor",
+    "references": [
+        "GUID:2d5bc3b42bd33e943866cf83ffbda996"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

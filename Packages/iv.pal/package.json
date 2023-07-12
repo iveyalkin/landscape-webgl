@@ -1,0 +1,10 @@
+{
+  "name": "iv.pal",
+  "version": "0.0.1",
+  "description": "A layer over base engine audio capabilities",
+  "displayName": "Practical Audio Layer",
+  "author": "iv",
+  "dependencies": {
+    "iv.core": "0.0.1"
+  }
+}

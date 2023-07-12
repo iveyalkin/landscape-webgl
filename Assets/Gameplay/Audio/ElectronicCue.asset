@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafd18cdd3284e3ca5b7a029a95b4541, type: 3}
+  m_Name: ElectronicCue
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 5b5967c48f0d948728847833243aeaa9, type: 3}
+  - {fileID: 8300000, guid: ad0d5500fa6695d4283daa34d8ed644f, type: 3}
+  - {fileID: 8300000, guid: 5adea8df3bd1e684f97a9ab0e950247a, type: 3}
+  - {fileID: 8300000, guid: ae10581d40e139f4186ddc03b5c4f063, type: 3}
+  - {fileID: 8300000, guid: a93c1feb49d7bd44fb89c2ccd3b453f0, type: 3}
+  <BaseVolume>k__BackingField: 0.8
+  <Loop>k__BackingField: 1
