@@ -11,6 +11,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+      - name: Create UPM auth file
+        run: |
+          mkdir -p /etc
+          cat > /etc/upmconfig.toml << 'EOL'
+          [npmAuth."https://npm.pkg.github.com"]
+          token = "${{ secrets.GITHUB_TOKEN }}"
+          email = "41898282+github-actions[bot]@users.noreply.github.com"
+          alwaysAuth = true
+          EOL
       - name: Cache
         uses: actions/cache@v4
         with:
