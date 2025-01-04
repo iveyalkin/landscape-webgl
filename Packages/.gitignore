@@ -1,3 +1,7 @@
 # ignore upm packages that has theis own repositories
 iv.unity-component-binder/
 landscape.content/
+
+# UPM
+# force to resolve packages independenly on CI
+packages-lock.json
