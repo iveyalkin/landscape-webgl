@@ -16,9 +16,8 @@ jobs:
           mkdir -p /etc
           cat > /etc/upmconfig.toml << 'EOL'
           [npmAuth."https://npm.pkg.github.com"]
-          token = "${{ secrets.GITHUB_TOKEN }}"
-          email = "41898282+github-actions[bot]@users.noreply.github.com"
-          alwaysAuth = true
+            token = "${{ secrets.NPM_READ_TOKEN }}"
+            alwaysAuth = true
           EOL
       - name: Cache
         uses: actions/cache@v4
