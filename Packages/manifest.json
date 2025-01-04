@@ -12,6 +12,7 @@
     "iv.core": "0.0.1",
     "iv.pal": "0.0.1",
     "iv.unity-component-binder": "https://github.com/iveyalkin/roslyn-generators.git#v0.0.1",
+    "iv.landscape.content": "0.0.1",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -30,7 +31,7 @@
   "scopedRegistries": [
     {
       "name": "GitHub Packages iVeyalkin",
-      "url": "https://npm.pkg.github.com/iveyalkin",
+      "url": "https://npm.pkg.github.com/@iveyalkin",
       "scopes": [
         "iv"
       ],
