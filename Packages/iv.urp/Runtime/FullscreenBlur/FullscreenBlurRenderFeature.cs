@@ -12,6 +12,8 @@ namespace IV.Core.URP.FullscreenBlur
         private BlurPass blurPass;
         private Material blurMaterial;
 
+        public void SetFullscreenBlur(bool enable) => SetActive(enable);
+
         public override void Create()
         {
             if (settings.blurShader == null) return;
@@ -19,10 +21,11 @@ namespace IV.Core.URP.FullscreenBlur
             if (blurMaterial == null)
                 blurMaterial = CoreUtils.CreateEngineMaterial(settings.blurShader);
 
-            blurPass = new BlurPass(blurMaterial, settings)
-            {
-                renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing
-            };
+            if (blurPass == null)
+                blurPass = new BlurPass(blurMaterial, settings)
+                {
+                    renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing
+                };
         }
 
         public override void SetupRenderPasses(ScriptableRenderer renderer,
@@ -34,6 +37,7 @@ namespace IV.Core.URP.FullscreenBlur
         public override void AddRenderPasses(ScriptableRenderer renderer,
             ref RenderingData renderingData)
         {
+            // if (!settings.isEnabled) return;
             if (blurPass == null) return;
 
             if (renderingData.cameraData.cameraType == CameraType.Game &&
@@ -45,6 +49,8 @@ namespace IV.Core.URP.FullscreenBlur
         protected override void Dispose(bool disposing)
         {
             CoreUtils.Destroy(blurMaterial);
+            blurMaterial = null;
+            blurPass = null;
         }
 
         [Serializable]

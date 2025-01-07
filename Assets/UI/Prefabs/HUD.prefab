@@ -436,6 +436,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  graphicsController: {fileID: 11400000, guid: 04c618c3715b1094fb1adb54f76f0374, type: 2}
 --- !u!222 &6679363331179209098
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -930,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 4666656850443924861, guid: cd7aa54329f63324cb7575a1aa06edd1,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.0000004975692
       objectReference: {fileID: 0}
     - target: {fileID: 4666656850443924861, guid: cd7aa54329f63324cb7575a1aa06edd1,
         type: 3}

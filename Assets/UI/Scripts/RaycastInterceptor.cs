@@ -1,6 +1,12 @@
+using System.Collections.Generic;
+using System.Reflection;
+using IV.Core.URP;
+using IV.Core.URP.FullscreenBlur;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 namespace IV.UI
@@ -10,6 +16,7 @@ namespace IV.UI
         private int refCounter;
 
         [SerializeField] private UnityEvent OnClick;
+        [SerializeField] private GraphicsController graphicsController;
 
         protected override void OnPopulateMesh(VertexHelper vh)
         {
@@ -39,6 +46,18 @@ namespace IV.UI
             if (gameObject.activeSelf) return;
 
             gameObject.SetActive(true);
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            graphicsController.SetFullscreenBlur(true);
+        }
+
+        protected override void OnDisable()
+        {
+            graphicsController.SetFullscreenBlur(false);
+            base.OnDisable();
         }
     }
 }
