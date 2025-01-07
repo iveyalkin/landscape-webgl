@@ -10,6 +10,7 @@
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.5",
     "iv.core": "0.0.1",
+    "iv.core.urp": "0.0.1",
     "iv.pal": "0.0.1",
     "iv.unity-component-binder": "https://github.com/iveyalkin/roslyn-generators.git#v0.0.1",
     "iv.landscape.content": "0.0.1",
