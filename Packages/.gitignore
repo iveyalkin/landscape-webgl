@@ -1,5 +1,6 @@
 # ignore upm packages that has theis own repositories
 iv.unity-component-binder/
+iv.core.urp/
 landscape.content/
 
 # UPM
