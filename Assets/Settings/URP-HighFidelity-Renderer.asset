@@ -109,7 +109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    isEnabled: 0
     blurShader: {fileID: 4800000, guid: 2f1bb0e053625a448a83d02093d881b1, type: 3}
     blurRadius: 2
     intensity: 3
