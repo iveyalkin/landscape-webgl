@@ -8,8 +8,6 @@ namespace IV.Core.URP
     [CreateAssetMenu(fileName = nameof(GraphicsController), menuName = "Graphics/GraphicsController", order = 0)]
     public class GraphicsController : ScriptableObject
     {
-        [SerializeField] private UniversalRendererData[] rendererData;
-
         private UniversalRenderPipelineAsset CurrentAsset => (UniversalRenderPipelineAsset)GraphicsSettings.currentRenderPipeline;
 
         public void SetFullscreenBlur(bool enable)
