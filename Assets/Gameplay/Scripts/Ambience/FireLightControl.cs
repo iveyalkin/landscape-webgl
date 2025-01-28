@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace IV.Gameplay.Interactions
+namespace IV.Gameplay.Ambience
 {
     [RequireComponent(typeof(Light))]
     public partial class FireLightControl : MonoBehaviour
