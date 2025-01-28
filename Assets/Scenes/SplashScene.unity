@@ -269,7 +269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cycleLength: 24
   sun:
-    light: {fileID: 410087040}
     minColorTemperature: 1000
     maxColorTemperature: 6500
     phase: 0
@@ -341,7 +340,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   moon:
-    light: {fileID: 0}
     minColorTemperature: 10000
     maxColorTemperature: 20000
     phase: 0.5
