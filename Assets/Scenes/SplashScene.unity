@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 0
-  m_FogColor: {r: 0.65471697, g: 0.9595811, b: 1, a: 1}
-  m_FogMode: 1
-  m_FogDensity: 0.01
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.02
   m_LinearFogStart: 120
   m_LinearFogEnd: 150
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.41960785, g: 0.5407686, b: 0.627451, a: 1}
+  m_SubtractiveShadowColor: {r: 0.038118746, g: 0.049162496, b: 0.056999996, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: db8334db7259ca242a49ad3dadb32f3b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -718,6 +718,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3319142437075342137, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319142437075342137, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319142437075342137, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3471974217369627641, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1085,8 +1100,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8988685880936164651, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988685880936164651, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988685880936164651, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9040666349181654606, guid: 0eb0dcaeaaf2c584fa56ac100ce7237a,
         type: 3}
