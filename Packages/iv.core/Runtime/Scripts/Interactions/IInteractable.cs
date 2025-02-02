@@ -7,6 +7,7 @@ namespace IV.Core.Interactions
         float InteractionTime { get; }
 
         Vector3 GetInteractionPoint();
+        bool AssertInteraction();
         void StartInteraction();
         void CompleteInteraction();
         void CancelInteraction();

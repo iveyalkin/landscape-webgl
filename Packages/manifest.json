@@ -13,7 +13,7 @@
     "iv.core.urp": "0.0.2",
     "iv.pal": "0.0.1",
     "iv.unity-component-binder": "https://github.com/iveyalkin/roslyn-generators.git#v0.0.1",
-    "iv.landscape.content": "0.0.3",
+    "iv.landscape.content": "0.0.4",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

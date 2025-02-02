@@ -27,5 +27,14 @@ namespace IV.Gameplay
 
             OnPickupAdded();
         }
+        
+        public bool HasPickup(Pickup.Data pickupData)
+        {
+            foreach (var pickup in Pickups)
+                if (pickup.name == pickupData.name)
+                    return true;
+
+            return false;
+        }
     }
 }

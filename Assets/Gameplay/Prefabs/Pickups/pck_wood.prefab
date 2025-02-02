@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pck_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 3876411993697855052, guid: 7af76e1a1fcd30242812f8b3706f0264,
+        type: 3}
+      propertyPath: data.name
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4954521680472220549, guid: 7af76e1a1fcd30242812f8b3706f0264,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96,18 +101,6 @@ PrefabInstance:
     - target: {fileID: 196780, guid: 732f4b2b37ba80a4689e6f00f465bb58, type: 3}
       propertyPath: m_Name
       value: Birch_Firewood_Pile_01_LOD
-      objectReference: {fileID: 0}
-    - target: {fileID: 461428, guid: 732f4b2b37ba80a4689e6f00f465bb58, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 461428, guid: 732f4b2b37ba80a4689e6f00f465bb58, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 461428, guid: 732f4b2b37ba80a4689e6f00f465bb58, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 461428, guid: 732f4b2b37ba80a4689e6f00f465bb58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
