@@ -8,12 +8,14 @@ jobs:
       - name: Create env file
         run: |
           mkdir -p ./config
-          echo "${{ secrets.UNITY_EMAIL }}\n" > ./config/.auth
-          echo "${{ secrets.UNITY_LICENSE }}\n" >> ./config/.auth
-          echo "${{ secrets.UNITY_PASSWORD }}\n" >> ./config/.auth
-          echo "${{ secrets.UPM_CONFIG_FILE_BASE64 }}" >> ./config/.auth
+          ls -la ./config
+          echo -e "${{ secrets.UNITY_EMAIL }}" > ./config/auth
+          echo -e "${{ secrets.UNITY_LICENSE }}" >> ./config/auth
+          echo -e "${{ secrets.UNITY_PASSWORD }}" >> ./config/auth
+          echo -e "${{ secrets.UPM_CONFIG_FILE_BASE64 }}" >> ./config/auth
+          ls -la ./config
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Export
-          path: "./config"
+          path: "./config/auth"
