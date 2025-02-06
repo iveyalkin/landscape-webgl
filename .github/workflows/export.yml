@@ -5,15 +5,15 @@ jobs:
     name: Save ULF
     runs-on: ubuntu-latest
     steps:
-      - name: Create UPM auth file
+      - name: Create env file
         run: |
-          mkdir ${{ vars.UPM_CONFIG_DIR }}
-          echo "${{ secrets.UNITY_EMAIL }}" | base64 > ${{ vars.UPM_CONFIG_DIR }}/.auth
-          echo "${{ secrets.UNITY_LICENSE }}" | base64 >> ${{ vars.UPM_CONFIG_DIR }}/.auth
-          echo "${{ secrets.UNITY_PASSWORD }}" | base64 >> ${{ vars.UPM_CONFIG_DIR }}/.auth
-          echo "${{ secrets.UPM_CONFIG_FILE_BASE64 }}" >> ${{ vars.UPM_CONFIG_DIR }}/.auth
+          mkdir -p ./config
+          echo "${{ secrets.UNITY_EMAIL }}\n" > ./config/.auth
+          echo "${{ secrets.UNITY_LICENSE }}\n" >> ./config/.auth
+          echo "${{ secrets.UNITY_PASSWORD }}\n" >> ./config/.auth
+          echo "${{ secrets.UPM_CONFIG_FILE_BASE64 }}" >> ./config/.auth
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Export
-          path: "${{ vars.UPM_CONFIG_DIR }}"
+          path: "./config"
