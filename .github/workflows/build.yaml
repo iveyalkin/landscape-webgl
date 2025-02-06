@@ -1,0 +1,63 @@
+name: Build Release
+on: workflow_dispatch
+jobs:
+
+  build:
+    name: Build WebGL
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      - name: Create UPM auth file
+        run: |
+          mkdir ${{ vars.UPM_CONFIG_DIR }}
+          echo "${{ secrets.UPM_CONFIG_FILE_BASE64 }}" | base64 -d > ${{ vars.UPM_CONFIG_DIR }}/.upmconfig.toml
+
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: WebGL
+          customImage: 'unityci/editor:ubuntu-6000.0.32f1-webgl-3.1.0'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Build
+          path: "**/build"
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+    steps:
+
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: Build
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: release-latest
+          files: |
+            **/WebGL.loader.js
+            **/WebGL.framework.js.unityweb
+            **/WebGL.wasm.unityweb
+            **/WebGL.data.unityweb
